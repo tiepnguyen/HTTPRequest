@@ -13,6 +13,7 @@
 		39D46E0B1A1DE08000E01693 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39D46E0A1A1DE08000E01693 /* Images.xcassets */; };
 		39D46E0E1A1DE08000E01693 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39D46E0C1A1DE08000E01693 /* LaunchScreen.xib */; };
 		39D46E1A1A1DE08000E01693 /* HTTPRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D46E191A1DE08000E01693 /* HTTPRequestTests.swift */; };
+		39D46E241A1DE0DE00E01693 /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D46E231A1DE0DE00E01693 /* HTTPRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		39D46E131A1DE08000E01693 /* HTTPRequestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HTTPRequestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		39D46E181A1DE08000E01693 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		39D46E191A1DE08000E01693 /* HTTPRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequestTests.swift; sourceTree = "<group>"; };
+		39D46E231A1DE0DE00E01693 /* HTTPRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			children = (
 				39D46E031A1DE08000E01693 /* AppDelegate.swift */,
 				39D46E051A1DE08000E01693 /* ViewController.swift */,
+				39D46E231A1DE0DE00E01693 /* HTTPRequest.swift */,
 				39D46E071A1DE08000E01693 /* Main.storyboard */,
 				39D46E0A1A1DE08000E01693 /* Images.xcassets */,
 				39D46E0C1A1DE08000E01693 /* LaunchScreen.xib */,
@@ -212,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39D46E241A1DE0DE00E01693 /* HTTPRequest.swift in Sources */,
 				39D46E061A1DE08000E01693 /* ViewController.swift in Sources */,
 				39D46E041A1DE08000E01693 /* AppDelegate.swift in Sources */,
 			);
@@ -339,6 +343,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HTTPRequest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -349,6 +354,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HTTPRequest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -407,6 +413,7 @@
 				39D46E1F1A1DE08000E01693 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		39D46E201A1DE08000E01693 /* Build configuration list for PBXNativeTarget "HTTPRequestTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +422,7 @@
 				39D46E221A1DE08000E01693 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

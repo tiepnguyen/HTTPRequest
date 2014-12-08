@@ -12,7 +12,13 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        let url = "http://localhost/json.php"
+        
+        HTTPRequest.GET(url, callback: { (response, error) -> () in
+            println(response)
+            println(error)
+        })
     }
 
     override func didReceiveMemoryWarning() {
