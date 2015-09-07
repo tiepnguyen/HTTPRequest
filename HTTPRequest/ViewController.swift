@@ -13,11 +13,17 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let url = "http://localhost/json.php"
+        let url = "http://beta.superghs.com/api/voucher/896"
         
-        HTTPRequest.GET(url, callback: { (response, error) -> () in
-            println(response)
-            println(error)
+        HTTPRequest.GET(url, callback: { (data, text, error) -> () in
+//            println(data)
+//            println(text)
+//            println(error)
+            var decodeError: NSError?
+            let json = JSON(data: data!)
+            println(json["procedure"].stringValue)
+            let jsonDict = NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers, error: &decodeError) as NSDictionary
+            println(jsonDict)
         })
     }
 

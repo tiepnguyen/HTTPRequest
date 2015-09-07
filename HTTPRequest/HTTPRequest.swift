@@ -73,18 +73,12 @@ class HTTPRequest {
         }
         request.URL = NSURL(string: url + query)!
         request.HTTPMethod = method.toString
-//        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
-            NSURLConnection.sendAsynchronousRequest(request, queue: .mainQueue()) { (response, data, error) -> Void in
-                if error != nil {
-//                    dispatch_async(dispatch_get_main_queue()) {
-                        callback(data: data, text: nil, error: error.localizedDescription)
-//                    }
-                } else {
-//                    dispatch_async(dispatch_get_main_queue()) {
-                        callback(data: data, text: NSString(data: data, encoding: NSUTF8StringEncoding), error: nil)
-//                    }
-                }
-//            }
+        NSURLConnection.sendAsynchronousRequest(request, queue: .mainQueue()) { (response, data, error) -> Void in
+            if error != nil {
+                callback(data: data, text: nil, error: error.localizedDescription)
+            } else {
+                callback(data: data, text: NSString(data: data, encoding: NSUTF8StringEncoding) as? String, error: nil)
+            }
         }
         /*
         NSURLConnection.sendAsynchronousRequest(request, queue: .mainQueue()) { (response, data, error) -> Void in
